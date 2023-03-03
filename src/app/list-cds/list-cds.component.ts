@@ -40,7 +40,7 @@ export class ListCDsComponent implements OnInit {
         price : 12.99,
         thumbnail : "https://upload.wikimedia.org/wikipedia/en/7/7f/Pink_Floyd_-_Wish_You_Were_Here.png",
         releaseDate : new Date(1975, 9, 1),
-        quantity : 10,
+        quantity : 0,
         onSale : true
       },
       {
