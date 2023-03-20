@@ -10,6 +10,6 @@ export class CdComponent {
  @Input() leCd!: CD;
 
  onAddCD(){
-  this.leCd.quantity++
+  this.leCd.quantity++;
  }
 }
