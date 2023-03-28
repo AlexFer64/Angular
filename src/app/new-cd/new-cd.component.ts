@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { CD } from 'src/app/models/cd';
 
 @Component({
@@ -22,7 +22,19 @@ export class NewCDComponent {
       thumbnail: [null],
       releaseDate: [null],
       quantity: [null]
-    })
+    });
+
+    this.currentCD$ = this.formulaire.valueChanges.pipe(map(formValue => (
+      {
+        id: 0,
+        title: formValue.title,
+        author: formValue.author,
+        thumbnail: formValue.thumbnail,
+        releaseDate: formValue.releaseDate,
+        quantity: formValue.quantity,
+        price: formValue.price
+      }
+    )));
   }
 
 

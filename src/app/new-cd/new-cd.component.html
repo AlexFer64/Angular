@@ -33,7 +33,7 @@
     <section class="vueForm">
         <h2>Vue du CD</h2>
         <div *ngIf="currentCD$ | async as unCD ">
-            <h3>{{ unCD.title | uppercase}}</h3>
+            <h3>Titre : {{ unCD.title | uppercase}}</h3>
             <p>Sortie le : {{ unCD.releaseDate | date: "dd/MM/yyyy"}}</p>
             <p>Auteur/Groupe : {{ unCD.author }}</p>
             <img [src]="unCD.thumbnail" [alt]="unCD.title">
